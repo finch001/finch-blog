@@ -38,4 +38,5 @@ jobs:
             - node_modules
           key: v1-dependencies-{{ checksum "package.json" }}
 
-      - run: sh deploy-circle.js
+      - run: npm run build:doc
+      - run: npm run deploy:doc
