@@ -39,4 +39,10 @@ jobs:
           key: v1-dependencies-{{ checksum "package.json" }}
 
       - run: npm run build:doc
-      - run: npm run deploy:doc
+      - run:
+          name: Deploying to GitHub Pages
+          command: |
+            git config --global user.email "422465778@qq.com"  ## git 的一些配置
+            git config --global user.name "finch001"
+            echo "machine github.com login finch001 password $GITHUB_TOKEN" > ~/.netrc 
+            GIT_USER=finch npm run deploy:doc
