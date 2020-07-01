@@ -1,0 +1,15 @@
+{
+  "name": "finch001.github.io",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "git@github.com:finch001/finch001.github.io.git",
+  "author": "mobai <mobai@douyu.tv>",
+  "license": "MIT",
+  "scripts": {
+    "build:doc": "vuepress build .",
+    "deploy:doc": "node ./deploy-circle.js"
+  },
+  "devDependencies": {
+    "vuepress": "^1.5.2"
+  }
+}
