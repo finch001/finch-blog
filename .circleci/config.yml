@@ -42,7 +42,7 @@ jobs:
             git config --global user.email "422465778@qq.com"  ## git 的一些配置
             git config --global user.name "finch001"
             echo "machine github.com login finch001 password $GITHUB_TOKEN" > ~/.netrc 
-            echo '' > ./dist/.nojekll && 
+            echo '' > ~/project/dist/.nojekll && 
             GIT_USER=finch npm run deploy:doc
 
 workflows:
