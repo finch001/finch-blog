@@ -21,6 +21,7 @@
     "dev": "nuxt",
     "generate": "nuxt generate",
     "analyze": "nuxt build --analyze",
+    "touch": "touch ./dist/.nojekyll",
     "deploy:doc": "node ./deploy-circle.js"
   },
   "devDependencies": {
