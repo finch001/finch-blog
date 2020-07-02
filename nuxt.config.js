@@ -31,7 +31,7 @@ const baseUrl = "https://finch001.github.io/";
 
 module.exports = {
   router: {
-    base: "/finch001.github.io/",
+    base: "/finch-blog/",
   },
   env: {
     baseUrl,
