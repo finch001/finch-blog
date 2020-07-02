@@ -3,46 +3,53 @@
 # Check https://circleci.com/docs/2.0/language-javascript/ for more details
 #
 version: 2
-workflow:
+jobs:
+  build:
+    docker:
+      # specify the version you desire here
+      - image: circleci/node:latest
+
+      # Specify service dependencies here if necessary
+      # CircleCI maintains a library of pre-built images
+      # documented at https://circleci.com/docs/2.0/circleci-images/
+      # - image: circleci/mongo:3.4.4
+
+    # working_directory: ~/repo
+
+    # only master branch will be deployed
+
+    steps:
+      - checkout
+
+      # Download and cache dependencies
+      - restore_cache:
+          keys:
+            - v1-dependencies-{{ checksum "package.json" }}
+            # fallback to using the latest cache if no exact match is found
+            - v1-dependencies-
+
+      - run: npm install
+
+      - save_cache:
+          paths:
+            - node_modules
+          key: v1-dependencies-{{ checksum "package.json" }}
+
+      - run: npm run generate
+      - run:
+          name: Deploying to GitHub Pages
+          command: |
+            git config --global user.email "422465778@qq.com"  ## git 的一些配置
+            git config --global user.name "finch001"
+            echo "machine github.com login finch001 password $GITHUB_TOKEN" > ~/.netrc 
+            touch ./dist/.nojekll
+            GIT_USER=finch npm run deploy:doc
+
+workflows:
+  version: 2
   build-deploy:
     jobs:
-      - js-build:
-          docker:
-            # specify the version you desire here
-            - image: circleci/node:latest
-
-            # Specify service dependencies here if necessary
-            # CircleCI maintains a library of pre-built images
-            # documented at https://circleci.com/docs/2.0/circleci-images/
-            # - image: circleci/mongo:3.4.4
-
-          # working_directory: ~/repo
-
-          # only master branch will be deployed
-
-          steps:
-            - checkout
-
-            # Download and cache dependencies
-            - restore_cache:
-                keys:
-                  - v1-dependencies-{{ checksum "package.json" }}
-                  # fallback to using the latest cache if no exact match is found
-                  - v1-dependencies-
-
-            - run: npm install
-
-            - save_cache:
-                paths:
-                  - node_modules
-                key: v1-dependencies-{{ checksum "package.json" }}
-
-            - run: npm run generate
-            - run:
-                name: Deploying to GitHub Pages
-                command: |
-                  git config --global user.email "422465778@qq.com"  ## git 的一些配置
-                  git config --global user.name "finch001"
-                  echo "machine github.com login finch001 password $GITHUB_TOKEN" > ~/.netrc 
-                  touch ./dist/.nojekll
-                  GIT_USER=finch npm run deploy:doc
+      - build:
+          filters:
+            branches:
+              only: doc
