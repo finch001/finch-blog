@@ -1,109 +1,98 @@
-# blog
+<p align="center">
+  <a href="https://nuxtjs.org/">
+  <img src="https://avatars2.githubusercontent.com/u/23360933?s=200&v=4" height="60">
+  </a>
+  +
+  <img src="https://geekytheory.com/wp-content/uploads/2014/03/markdown_inte-1024x630.png" height="60">
+</p>
+<h1 align="center">
+  Nuxt + Markdown blog starter
+</h1>
+<p align="center">
+  This is not an official project. It's made by <a href="https://marinaaisa.com/">Marina Aísa</a> and you can contribute submitting a pull-request.
+  </a>
+</p>
 
-## 计算机网络
------------------------
-## 算法
------------------------
-## web
-- [graphql-type](./src/web/graphql/type.md)
-- [graphql-query](./src/web/graphql/query.md)
+## ⚡️ Live
+[Check it live](https://nuxt-markdown-blog-starter.netlify.com/)
 
------------------------
-## react 学习笔记
+## ✨ Quick start
 
-目录如下
-- 主要概念
-- 高级概念
-- HOOKS
+1.  **Clone this repository.**
 
-## JS 学习笔记
+    ```sh
+    git clone https://github.com/marinaaisa/nuxt-markdown-blog-starter.git
+    ```
 
-* [执行上下文](./src/web/js/src/执行上下文.md)
-* 【进阶3期】 this全面解析
-* 【进阶4期】 深浅拷贝原理
-* 【进阶5期】 原型Prototype
-* 【进阶6期】 高阶函数
-* 【进阶7期】 事件机制
-* 【进阶8期】 Event Loop原理
-* 【进阶9期】 Promise原理
-* 【进阶10期】Async/Await原理
-* 【进阶11期】防抖/节流原理
-* 【进阶12期】模块化详解
-* 【进阶13期】ES6重难点
-* 【进阶14期】计算机网络概述
-* 【进阶15期】浏览器渲染原理
-* 【进阶16期】webpack配置
-* 【进阶17期】webpack原理
-* 【进阶18期】前端监控
-* 【进阶19期】跨域和安全
-* 【进阶20期】性能优化
-* 【进阶21期】VirtualDom原理
-* 【进阶22期】Diff算法
-* 【进阶23期】MVVM双向绑定
-* 【进阶24期】Vuex原理
-* 【进阶25期】Redux原理
-* 【进阶26期】路由原理
-* 【进阶27期】VueRouter源码解析
-* 【进阶28期】ReactRouter源码解析
+2.  **Start developing.**
 
-### html
-### css
+    Navigate into your new site’s directory and start it up.
 
-## node
------------------------
-### Nodejs学习笔记
+    ```sh
+    cd nuxt-markdown-blog-starter/
+    npm install
+    npm run dev
+    ```
 
-- 基础  核心模块常用API 的使用、注意事项。
-- 进阶  含常用框架、库介绍，从编码到服务端部署运维。
+3.  **Running!**
 
-#### 目录如下
-- 内置模块
-  - []资源压缩-zlib
-  - []文件系统操作-fs
-  - []域名解析-dns
-  - [网络服务-http](./src/node/src/http/http.md)
-  - []网络服务-https
-  - [网络TCP-net](./src/node/src/tcp/tcp.md)
-  - []网络UDP-dgram
-  - []网络地址解析-url
-  - []数据加密-crypto
-  - [URL查询字符串querystring](./src/node/src/queryString/queryString.md)
-  - [二进制数据-buffer](./src/node/src/buffer/buffer.md)
-  - []子进程-child_process
-  - []进程相关-process
-  - []集群-cluster
-  - []基础调试-console
-  - []进阶调试-debugger
-  - []错误处理-error
-  - [流处理-stream](./src/node/src/stream/index.md)
-  - []事件机制-events
-  - []全局对象-global
-  - [模块机制-module](./src/node/src/modules/modules.md)
-  - [HTTP缓存机制-cache](./src/node/src/Cache/cache.md)
-  - [本地路径处理-Path](./src/node/src/path/index.md)
-  - []逐行读取-readline
-  - []命令行设计-repl
-  - []实用工具模块-util
-  - []流操作-stream
-  - []二进制解码-string_decoder
-  - []定时器-timers
-  - []安全加密-tls
-- 进阶使用
-  - [nextjs框架使用](./src/web/nextjs/index.md)
-    - DI
-    - AOP
-    - RxJS
-    - TypeScript
-  - [RESTful风格](./src/node/src/restful/RESTful.md)
-  - 如何使用express
-  - [express的中间件](./src/node/src/express/middleware.md)
-  - []部署运维部分
-  - []构建部分 
-  - []Node.js在前端工程化应用
-  - []爬虫相关 
-  - [构建web应用]()
-  - [配置语言YAML]()
-  - [Yeoman]()
-  - [handleBars](./src/node/src/handlebars/handlebars.md)
+    Your site is now running at `http://localhost:3000`!
 
-## pm
+## 🧐 What's inside?
+
+    .
+    ├── node_modules
+    ├── assets
+    ├── components
+    ├── contents
+      ├── en
+        ├── blog
+        ├── blogsEn.js
+      ├── es
+        ├── blog
+        ├── blogsEs.js
+    ├── layouts
+    ├── locales
+    ├── pages
+    ├── plugins
+    ├── static
+    ├── .gitignore
+    ├── LICENSE
+    ├── nuxt.config.js
+    ├── package-lock.json
+    ├── package.json
+    └── README.md
+
+1.  **`/node_modules`**: This directory contains all of the modules of code that your project depends on (npm packages) are automatically installed.
+
+2.  **`/assets`**: You will find the images and assets for the project. You can find more information at [Nuxt's assets directory documentation](https://nuxtjs.org/guide/assets/)
+
+3.  **`/components`**: Vue components for the project. You can find more information at [Nuxt's components directory documentation](https://nuxtjs.org/guide/directory-structure#the-components-directory)
+
+4.  **`/contents`**: You will save your MD files here. They are divided by language and you will have to write the URL name of each of them at `blogsEn.js` and `blogsEs.js`.
+
+5.  **`/layouts`**: You can find information at [Nuxt's layout directory documentation](https://nuxtjs.org/guide/directory-structure#the-layouts-directory)
+
+6.  **`/locales`**: You will save your translations here.
+
+7.  **`/pages`**: You can find information at [Nuxt's pages directory documentation](https://nuxtjs.org/guide/directory-structure#the-pages-directory)
+
+8.  **`/plugins`**: You can find information at [Nuxt's plugins directory documentation](https://nuxtjs.org/guide/directory-structure#the-plugins-directory)
+
+9.  **`/statics`**: You can find information at [Nuxt's statics directory documentation](https://nuxtjs.org/guide/directory-structure#the-static-directory)
+
+10. **`.gitignore`**: This file tells git which files it should not track / not maintain a version history for.
+
+11. **`LICENSE`**: This is licensed under the MIT license.
+
+12. **`nuxt-config.js`**: This is the main configuration file for a Nuxt site. This is where you can specify information about your site (metadata) like the site title and description, which Nuxt plugins you’d like to include, etc. (Check out the [config docs](https://nuxtjs.org/guide/configuration) for more detail).
+
+13. **`package-lock.json`** (See `package.json` below, first). This is an automatically generated file based on the exact versions of your npm dependencies that were installed for your project. **(You won’t change this file directly).**
+
+14. **`package.json`**: A manifest file for Node.js projects, which includes things like metadata (the project’s name, author, etc). This manifest is how npm knows which packages to install for your project.
+
+15. **`README.md`**: A text file containing useful reference information about your project.
+
+## 💫 Deploy
+
+[![Deploy to Netlify](https://www.netlify.com/img/deploy/button.svg)](https://app.netlify.com/start/deploy?repository=https://github.com/marinaaisa/nuxt-markdown-blog-starter)

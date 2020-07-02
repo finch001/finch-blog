@@ -1,5 +1,8 @@
 var ghpages = require("gh-pages");
 
-ghpages.publish("./.vuepress/dist", function(err) {
-  console.log("error", err);
+ghpages.publish("./.vuepress/dist", function (err) {
+  if (err) {
+    console.error(err);
+  }
+  console.log("deploy success");
 });
