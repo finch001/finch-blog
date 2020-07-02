@@ -30,7 +30,6 @@ const productionUrl = {
 const baseUrl = "https://finch001.github.io/";
 
 module.exports = {
-  mode: "spa",
   router: {
     base: "/finch-blog/",
   },
