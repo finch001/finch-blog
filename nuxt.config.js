@@ -30,6 +30,9 @@ const productionUrl = {
 const baseUrl = "https://finch001.github.io/";
 
 module.exports = {
+  router: {
+    base: "/finch001.github.io/",
+  },
   env: {
     baseUrl,
     productionUrl,

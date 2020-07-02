@@ -1,7 +1,7 @@
 {
-  "name": "nuxt-markdown-blog-starter",
+  "name": "finch-blog",
   "version": "1.0.0",
-  "author": "marinaaisa <marina@marinaaisa.com>",
+  "author": "finch <zheng0777@gmail.com>",
   "private": true,
   "engines": {
     "node": ">=8.0.0",
